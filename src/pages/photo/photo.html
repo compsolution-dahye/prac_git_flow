@@ -1,13 +1,28 @@
 <ion-header>
     <ion-navbar>
-      <button ion-button menuToggle>
+        <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Photo</ion-title>
+        <ion-title>Photo</ion-title>
     </ion-navbar>
-  </ion-header>
-  
-  <ion-content class="photo-page">
-      <h1>Photo Page</h1>
-  </ion-content>
-  
+</ion-header>
+
+<ion-content class="photo-page">
+    <ion-slides>
+        <ion-slide>
+            <img [src]="'assets/img/speakers/puppy.jpg'">
+        </ion-slide>
+        <ion-slide>
+            <img [src]="'assets/img/speakers/kitten.jpg'">
+        </ion-slide>
+        <ion-slide>
+            <img [src]="'assets/img/speakers/rabbit.jpg'">
+        </ion-slide>
+        <ion-slide>
+            <img [src]="'assets/img/speakers/giraffe.jpg'">
+        </ion-slide>
+        <ion-slide>
+            <img [src]="'assets/img/speakers/bear.jpg'">
+        </ion-slide>
+    </ion-slides>
+</ion-content>
