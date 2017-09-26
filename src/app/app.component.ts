@@ -19,6 +19,7 @@ import { SupportPage } from '../pages/support/support';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
+import { AppVersion } from '@ionic-native/app-version';
 
 export interface PageInterface {
   title: string;
@@ -68,8 +69,12 @@ export class ConferenceApp {
     public platform: Platform,
     public confData: ConferenceData,
     public storage: Storage,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private appVersion: AppVersion
   ) {
+
+    // Check version
+    console.log(this.appVersion.getVersionNumber(), this.appVersion.getAppName(), this.appVersion.getPackageName());
 
     // Check if the user has already seen the tutorial
     this.storage.get('hasSeenTutorial')
